@@ -1,0 +1,23 @@
+.app {
+  & {
+    background-color: var(--color-gray-0);
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.navigation {
+  &__item {
+    cursor: pointer;
+    padding: 1rem;
+    flex: 1 0 auto;
+    border: .05rem dotted grey;
+
+    &--selected {
+      background-color: lightgreen;
+    }
+  }
+}
