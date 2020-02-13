@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FaHome, FaHashtag, FaCalendarAlt, FaClock, FaMapMarkedAlt, FaSearch} from 'react-icons/fa';
 import './styles.scss';
 
@@ -7,6 +7,10 @@ export default (props) => {
   const selectedClass = (num) => {
     return currentStep === num ? 'navigation__item--selected' : ''
   };
+
+  useEffect(()=>{
+    console.log('init');
+  }, [props.name]);
 
   return (
     <div className="app">
